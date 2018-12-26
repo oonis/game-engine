@@ -57,6 +57,30 @@ CMAKE_BINARY_DIR = C:\Users\oonis\dev\game-engine\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install\local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local
+
+# Special rule for the target install/local
+install\local\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local\fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install\fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -78,6 +102,16 @@ rebuild_cache:
 rebuild_cache\fast: rebuild_cache
 
 .PHONY : rebuild_cache\fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components\fast: list_install_components
+
+.PHONY : list_install_components\fast
 
 # The main all target
 all: cmake_check_build_system
@@ -112,17 +146,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named game_engine
+# Target rules for targets named main
 
 # Build rule for target.
-game_engine: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) game_engine
-.PHONY : game_engine
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) main
+.PHONY : main
 
 # fast build rule for target.
-game_engine\fast:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\build
-.PHONY : game_engine\fast
+main\fast:
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\build
+.PHONY : main\fast
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw\fast:
+	$(MAKE) -f lib\glfw\src\CMakeFiles\glfw.dir\build.make /nologo -$(MAKEFLAGS) lib\glfw\src\CMakeFiles\glfw.dir\build
+.PHONY : glfw\fast
+
+#=============================================================================
+# Target rules for targets named libglew_static
+
+# Build rule for target.
+libglew_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) libglew_static
+.PHONY : libglew_static
+
+# fast build rule for target.
+libglew_static\fast:
+	$(MAKE) -f lib\glew\CMakeFiles\libglew_static.dir\build.make /nologo -$(MAKEFLAGS) lib\glew\CMakeFiles\libglew_static.dir\build
+.PHONY : libglew_static\fast
+
+#=============================================================================
+# Target rules for targets named libglewmx_static
+
+# Build rule for target.
+libglewmx_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) libglewmx_static
+.PHONY : libglewmx_static
+
+# fast build rule for target.
+libglewmx_static\fast:
+	$(MAKE) -f lib\glew\CMakeFiles\libglewmx_static.dir\build.make /nologo -$(MAKEFLAGS) lib\glew\CMakeFiles\libglewmx_static.dir\build
+.PHONY : libglewmx_static\fast
 
 src\main.obj: src\main.cpp.obj
 
@@ -130,7 +203,7 @@ src\main.obj: src\main.cpp.obj
 
 # target to build an object file
 src\main.cpp.obj:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\src\main.cpp.obj
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\main.cpp.obj
 .PHONY : src\main.cpp.obj
 
 src\main.i: src\main.cpp.i
@@ -139,7 +212,7 @@ src\main.i: src\main.cpp.i
 
 # target to preprocess a source file
 src\main.cpp.i:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\src\main.cpp.i
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\main.cpp.i
 .PHONY : src\main.cpp.i
 
 src\main.s: src\main.cpp.s
@@ -148,8 +221,35 @@ src\main.s: src\main.cpp.s
 
 # target to generate assembly for a file
 src\main.cpp.s:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\src\main.cpp.s
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\main.cpp.s
 .PHONY : src\main.cpp.s
+
+src\system\Application.obj: src\system\Application.cpp.obj
+
+.PHONY : src\system\Application.obj
+
+# target to build an object file
+src\system\Application.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\system\Application.cpp.obj
+.PHONY : src\system\Application.cpp.obj
+
+src\system\Application.i: src\system\Application.cpp.i
+
+.PHONY : src\system\Application.i
+
+# target to preprocess a source file
+src\system\Application.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\system\Application.cpp.i
+.PHONY : src\system\Application.cpp.i
+
+src\system\Application.s: src\system\Application.cpp.s
+
+.PHONY : src\system\Application.s
+
+# target to generate assembly for a file
+src\system\Application.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\system\Application.cpp.s
+.PHONY : src\system\Application.cpp.s
 
 # Help Target
 help:
@@ -157,12 +257,21 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... game_engine
+	@echo ... install/local
+	@echo ... install
 	@echo ... edit_cache
+	@echo ... main
 	@echo ... rebuild_cache
+	@echo ... list_install_components
+	@echo ... glfw
+	@echo ... libglew_static
+	@echo ... libglewmx_static
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/system/Application.obj
+	@echo ... src/system/Application.i
+	@echo ... src/system/Application.s
 .PHONY : help
 
 
