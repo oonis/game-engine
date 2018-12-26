@@ -58,33 +58,33 @@ include CMakeFiles\game_engine.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\game_engine.dir\flags.make
 
-CMakeFiles\game_engine.dir\main.cpp.obj: CMakeFiles\game_engine.dir\flags.make
-CMakeFiles\game_engine.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\oonis\dev\game-engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game_engine.dir/main.cpp.obj"
+CMakeFiles\game_engine.dir\src\main.cpp.obj: CMakeFiles\game_engine.dir\flags.make
+CMakeFiles\game_engine.dir\src\main.cpp.obj: ..\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\oonis\dev\game-engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game_engine.dir/src/main.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2017\BUILDT~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\game_engine.dir\main.cpp.obj /FdCMakeFiles\game_engine.dir\ /FS -c C:\Users\oonis\dev\game-engine\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\game_engine.dir\src\main.cpp.obj /FdCMakeFiles\game_engine.dir\ /FS -c C:\Users\oonis\dev\game-engine\src\main.cpp
 <<
 
-CMakeFiles\game_engine.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_engine.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~1\2017\BUILDT~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\game_engine.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\oonis\dev\game-engine\main.cpp
+CMakeFiles\game_engine.dir\src\main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_engine.dir/src/main.cpp.i"
+	C:\PROGRA~2\MICROS~1\2017\BUILDT~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\game_engine.dir\src\main.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\oonis\dev\game-engine\src\main.cpp
 <<
 
-CMakeFiles\game_engine.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_engine.dir/main.cpp.s"
+CMakeFiles\game_engine.dir\src\main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_engine.dir/src/main.cpp.s"
 	C:\PROGRA~2\MICROS~1\2017\BUILDT~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\game_engine.dir\main.cpp.s /c C:\Users\oonis\dev\game-engine\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\game_engine.dir\src\main.cpp.s /c C:\Users\oonis\dev\game-engine\src\main.cpp
 <<
 
 # Object files for target game_engine
 game_engine_OBJECTS = \
-"CMakeFiles\game_engine.dir\main.cpp.obj"
+"CMakeFiles\game_engine.dir\src\main.cpp.obj"
 
 # External object files for target game_engine
 game_engine_EXTERNAL_OBJECTS =
 
-game_engine.exe: CMakeFiles\game_engine.dir\main.cpp.obj
+game_engine.exe: CMakeFiles\game_engine.dir\src\main.cpp.obj
 game_engine.exe: CMakeFiles\game_engine.dir\build.make
 game_engine.exe: CMakeFiles\game_engine.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\oonis\dev\game-engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable game_engine.exe"

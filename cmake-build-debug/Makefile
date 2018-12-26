@@ -124,32 +124,32 @@ game_engine\fast:
 	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\build
 .PHONY : game_engine\fast
 
-main.obj: main.cpp.obj
+src\main.obj: src\main.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src\main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+src\main.cpp.obj:
+	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\src\main.cpp.obj
+.PHONY : src\main.cpp.obj
 
-main.i: main.cpp.i
+src\main.i: src\main.cpp.i
 
-.PHONY : main.i
+.PHONY : src\main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\main.cpp.i
-.PHONY : main.cpp.i
+src\main.cpp.i:
+	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\src\main.cpp.i
+.PHONY : src\main.cpp.i
 
-main.s: main.cpp.s
+src\main.s: src\main.cpp.s
 
-.PHONY : main.s
+.PHONY : src\main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\main.cpp.s
-.PHONY : main.cpp.s
+src\main.cpp.s:
+	$(MAKE) -f CMakeFiles\game_engine.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\game_engine.dir\src\main.cpp.s
+.PHONY : src\main.cpp.s
 
 # Help Target
 help:
@@ -160,9 +160,9 @@ help:
 	@echo ... game_engine
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

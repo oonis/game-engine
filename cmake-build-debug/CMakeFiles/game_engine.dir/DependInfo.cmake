@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/oonis/dev/game-engine/main.cpp" "C:/Users/oonis/dev/game-engine/cmake-build-debug/CMakeFiles/game_engine.dir/main.cpp.obj"
+  "C:/Users/oonis/dev/game-engine/src/main.cpp" "C:/Users/oonis/dev/game-engine/cmake-build-debug/CMakeFiles/game_engine.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

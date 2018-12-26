@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/oonis/dev/game-engine/main.cpp">
+		<Unit filename="C:/Users/oonis/dev/game-engine/src/main.cpp">
 			<Option target="game_engine"/>
 		</Unit>
 		<Unit filename="C:/Users/oonis/dev/game-engine/CMakeLists.txt">
