@@ -1,0 +1,3 @@
+C:/Users/oonis/dev/game-engine/cmake-build-debug/CMakeFiles/game_engine.dir
+C:/Users/oonis/dev/game-engine/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/oonis/dev/game-engine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
