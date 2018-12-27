@@ -8,8 +8,8 @@ add_definitions(-Wall)
 # Load libraries
 # glfw
 set(GLFW_BUILD_EXAMPLES OFF CACHE STRING "" FORCE)
-set(GLFW_BUILD_TESTS    OFF CACHE STRING "" FORCE)
-set(GLFW_INSTALL        OFF CACHE STRING "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE STRING "" FORCE)
+set(GLFW_INSTALL OFF CACHE STRING "" FORCE)
 add_subdirectory(lib/glfw)
 include_directories(lib/glfw/include)
 
@@ -23,5 +23,5 @@ include_directories(lib/glew/include lib/glew/src)
 include_directories(lib/glm)
 
 file(GLOB_RECURSE source_files ${PROJECT_SOURCE_DIR}/src/*)
-add_executable(main ${source_files} src/shader.cpp src/shader.h src/input/keyboard.cpp src/input/keyboard.h)
+add_executable(main ${source_files})
 target_link_libraries(main glfw ${GLFW_LIBRARIES} libglew_static)
