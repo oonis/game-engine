@@ -14,3 +14,14 @@ An OpenGL game engine side project of mine
 ```
 git clone git@github.com:oonis/game-engine.git --recursive
 ```
+
+## Building
+
+### MacOS/Linux
+
+```
+mkdir build
+cd build
+cmake ..
+make
+```
