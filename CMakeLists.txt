@@ -23,5 +23,5 @@ include_directories(lib/glew/include lib/glew/src)
 include_directories(lib/glm)
 
 file(GLOB_RECURSE source_files ${PROJECT_SOURCE_DIR}/src/*)
-add_executable(main ${source_files})
+add_executable(main ${source_files} src/shader.cpp src/shader.h)
 target_link_libraries(main glfw ${GLFW_LIBRARIES} libglew_static)
