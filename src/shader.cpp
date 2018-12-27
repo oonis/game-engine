@@ -15,6 +15,12 @@ using namespace std;
 
 #include "shader.h"
 
+/**
+ * Load a shader
+ * @param vertex_file_path
+ * @param fragment_file_path
+ * @return
+ */
 GLuint LoadShaders(const char *vertex_file_path, const char *fragment_file_path) {
 
     // Create the shaders
